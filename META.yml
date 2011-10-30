@@ -1,0 +1,33 @@
+---
+abstract: 'yeah, all those PREFIX definitions get boring'
+author:
+  - 'Toby Inkster <tobyink@cpan.org>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.61
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 1.02'
+keywords: []
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+module_name: RDF::QueryX::Lazy
+name: RDF-QueryX-Lazy
+no_index:
+  directory:
+    - inc
+    - t
+    - xt
+requires:
+  RDF::Query: 2.900
+  Scalar::Util: 0
+  common::sense: 0
+  perl: 5.10.0
+resources:
+  bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=RDF-QueryX-Lazy
+  homepage: https://metacpan.org/release/RDF-QueryX-Lazy
+  license: http://dev.perl.org/licenses/
+version: 0.001
