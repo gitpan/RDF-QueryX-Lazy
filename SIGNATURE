@@ -14,10 +14,10 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 f41814863855b8d35422af5afad8a22a800a6230 Changes
+SHA1 a0ca1369a7d095a64cc2385e889bccd9b626afe4 Changes
 SHA1 f3296a09eb07898f3ba6dd0ece615dafc1b57e16 LICENSE
 SHA1 305957bb2b2a9e6b285e3f27a677a6a40b346e14 MANIFEST
-SHA1 249474f960c9e20cc079b6e7e28d443dbdc8b18e META.yml
+SHA1 5a7938c621d65033c4776b85cc86cc767874a39a META.yml
 SHA1 7150e5e086ef493e1e527a1eeec44a8344b80db6 Makefile.PL
 SHA1 f33b8ceb0f8f12780273b5f2aed6bd65c2e63e87 README
 SHA1 5d94bc10deff1dd74e4bc5dfa6fc015e39271f15 inc/Module/AutoInstall.pm
@@ -39,16 +39,16 @@ SHA1 4db02ca3854a0d95bf38139e9b714cc85b618189 inc/Module/Package/Dist/RDF.pm
 SHA1 775bd24f2fdbb6dce51a8b5b0cdb01fccfce83c4 inc/Scalar/Util.pm
 SHA1 b1b664983568bf822c327599eb88e223483ae96a inc/Scalar/Util/PP.pm
 SHA1 eef6bff62046bff2ce08ba132d0b58fba30f40b4 inc/YAML/Tiny.pm
-SHA1 4bfcaf32d1227144669504483845d4eb3e885bbe lib/RDF/QueryX/Lazy.pm
-SHA1 0c25cf39a2fa4c23a4cce54b16713556b34f0432 meta/changes.ttl
+SHA1 b01f16e1afd13c871909e82a6a0d9a93ffdd21a4 lib/RDF/QueryX/Lazy.pm
+SHA1 fe3a4cbcd9c520653a319ff8129fc9694d89cd38 meta/changes.ttl
 SHA1 227aab6d6ed7f47700cb7fe110df2878d64200eb meta/doap.ttl
-SHA1 9dae6f9f045a9deb1cbd95ac68eba069f1b0a266 meta/makefile.ttl
+SHA1 d7347bb173ec8d7bc24f6f54592427c60589a390 meta/makefile.ttl
 SHA1 6b208709cb5b7d9894e202ad02d48752380f96e5 t/01basic.t
-SHA1 fb18f464deb272b40e4281c2bca1fcdba2a29d78 t/02laziness.t
+SHA1 3fea25621db5f9cecd74d6cd4a5b40d70a4ce0a8 t/02laziness.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk6sqPkACgkQzr+BKGoqfTnqbgCgn3fw/YobbrUlhP5zUWCSty1E
-6bIAni35EqL4QuTeIYmAZoBRwithVr0U
-=88is
+iEYEARECAAYFAk7EKY4ACgkQzr+BKGoqfTl7dwCgiMviWaP9SsiHHbV+DUjmub9m
+Nm0AnA1ilcwMid3bDY0jUReyoO54nX2J
+=XtEF
 -----END PGP SIGNATURE-----

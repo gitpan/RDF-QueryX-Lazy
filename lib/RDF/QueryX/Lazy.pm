@@ -5,12 +5,14 @@ use common::sense;
 use constant { FALSE => 0, TRUE => 1 };
 use utf8;
 
-our $Lazy;
+our (%Lazy);
 BEGIN {
 	$RDF::QueryX::Lazy::AUTHORITY = 'cpan:TOBYINK';
-	$RDF::QueryX::Lazy::VERSION   = '0.001';
+	$RDF::QueryX::Lazy::VERSION   = '0.002';
 
-	$Lazy = <<'LAZY';
+	%Lazy = 
+		map { /^PREFIX (.+?):/ ? ($1 => $_) : () }
+		split /\r?\n/, <<'LAZY';
 PREFIX bibo:  <http://purl.org/ontology/bibo/>
 PREFIX bio:   <http://purl.org/vocab/bio/0.1/>
 PREFIX cc:    <http://creativecommons.org/ns#>
@@ -45,25 +47,30 @@ LAZY
 use Scalar::Util 0 qw[blessed refaddr];
 use RDF::Query 2.900;
 
-use base qw[RDF::Query];
+use parent qw[RDF::Query];
 
 sub new
 {
 	my ($class, $query, @params) = @_;
 	
 	my $lazy = '';
-	
+	$lazy .= join "\n",
+		map  { $Lazy{$_} }
+		grep { $query =~ /$_:/ }
+		keys %Lazy;
+
 	if (exists $params[0]
 	and ref $params[0] eq 'HASH'
 	and ref $params[0]{lazy} eq 'HASH')
 	{
 		my %more = %{ delete($params[0]{lazy}) // {} };
-		$lazy = join "\n",
-			map { sprintf('PREFIX %s: <%s>', $_, $more{$_}) }
+		$lazy .= join "\n",
+			map  { sprintf('PREFIX %s: <%s>', $_, $more{$_}) }
+			grep { $query =~ /$_:/ }
 			keys %more;
 	}
 	
-	return $class->SUPER::new($Lazy.$lazy.$query, @params);
+	return $class->SUPER::new($lazy.$query, @params);
 }
 
 TRUE;
